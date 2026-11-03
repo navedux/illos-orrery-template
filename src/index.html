@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orrery: models for everything your team writes</title>
+<meta name="description" content="Reasoning, code, voice and search through one API, trained and served on Orrery's own cluster. An example site with animated assets by Illos.">
+<meta property="og:title" content="Orrery">
+<meta property="og:description" content="Models for everything your team writes. An example site with animated assets by Illos.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/main.js" type="module"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="logo" href="/" aria-label="Orrery home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle class="logo__orbit" cx="16" cy="16" r="12.6"/><g class="logo__arm"><path class="logo__rod" d="M16 16 L25.65 7.90"/><circle class="logo__planet" cx="25.65" cy="7.90" r="3.6"/></g><circle class="logo__sun" cx="16" cy="16" r="4.8"/></svg>
+      <span>Orrery</span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <div class="dd">
+        <button class="links__btn" type="button" aria-expanded="false" aria-controls="dd-products">Products<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+        <div class="panel panel--wide" id="dd-products" hidden>
+          <div class="panel__grid">
+            <a href="#top"><b>Chat</b><span>Ask anything, with sources</span></a>
+            <a href="#products"><b>Code</b><span>An agent that edits your repo</span></a>
+            <a href="#products"><b>Agent</b><span>Books, files and follows up</span></a>
+            <a href="#products"><b>Realtime</b><span>Streaming voice and text</span></a>
+            <a href="#products"><b>Search</b><span>The live web, cited</span></a>
+            <a href="#products"><b>Connectors</b><span>Drive, chat and tickets, read-only</span></a>
+          </div>
+          <a class="panel__foot" href="#models">Meet Orrery 3, our newest model<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 3 7.5 6l-3 3"/></svg></a>
+        </div>
+      </div>
+      <div class="dd">
+        <button class="links__btn" type="button" aria-expanded="false" aria-controls="dd-solutions">Solutions<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+        <div class="panel" id="dd-solutions" hidden>
+          <a href="#business"><b>Business</b><span>Answers from your own company</span></a>
+          <a href="#security"><b>Security</b><span>Isolated, audited, never trained on</span></a>
+          <a href="#contact"><b>Government</b><span>Dedicated regions and review</span></a>
+        </div>
+      </div>
+      <div class="dd">
+        <button class="links__btn" type="button" aria-expanded="false" aria-controls="dd-dev">Developers<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+        <div class="panel" id="dd-dev" hidden>
+          <a href="#api"><b>API overview</b><span>One endpoint for every model</span></a>
+          <a href="#models"><b>Models</b><span>Context, speed and prices</span></a>
+          <a href="#pricing"><b>Pricing</b><span>Pay per token, no seats</span></a>
+        </div>
+      </div>
+      <a class="links__a" href="#pricing">Pricing</a>
+      <a class="links__a" href="#contact">Contact</a>
+    </nav>
+    <div class="nav__end">
+      <a class="pill pill--line" href="#contact">Contact sales</a>
+      <span class="split">
+        <a class="pill pill--ink" href="#pricing">Try for free</a>
+        <button class="pill pill--ink split__more" type="button" aria-label="More ways to start" aria-expanded="false" aria-controls="dd-try"><svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></button>
+        <span class="panel panel--right" id="dd-try" hidden>
+          <a href="#pricing"><b>Web app</b><span>Chat in the browser</span></a>
+          <a href="#api"><b>API console</b><span>Keys, usage and logs</span></a>
+        </span>
+      </span>
+      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="sheet" id="sheet" hidden>
+    <a href="#products">Products</a><a href="#business">Business</a><a href="#api">Developers</a><a href="#pricing">Pricing</a><a href="#contact">Contact sales</a>
+    <a class="pill pill--ink" href="#pricing">Try for free</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero__in">
+      <a class="news" href="#models"><span class="news__tag">New</span><b>Orrery 3</b><span class="muted">is out now</span><span class="news__go" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M4.5 3.2v5.6L9 6z"/></svg></span></a>
+      <h1 class="display">Models for everything<br>your team <span class="rot" aria-live="off"><span class="rot__word">writes</span><span class="rot__line" aria-hidden="true"></span></span>.</h1>
+      <p class="lede">Reasoning, code, voice and search through one API. Trained and served on our own cluster.</p>
+      <div class="ctas">
+        <a class="pill pill--ink pill--lg" href="#api">Get API access<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 3 7.5 6l-3 3"/></svg></a>
+        <a class="pill pill--line pill--lg" href="#api">Read the docs</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <figure class="stage">
+        <img class="stage__bg" src="/img/hero-1280.webp" srcset="/img/hero-1280.webp 1280w, /img/hero-2560.webp 2560w" sizes="(min-width: 1312px) 1232px, 100vw" width="2560" height="1086" alt="" fetchpriority="high">
+        <div class="stage__spot">{{illos:orrery-command}}</div>
+      </figure>
+    </div>
+
+    <div class="wrap products" id="products">
+      <article class="prod">
+        <div class="well well--mint well--prod"><div class="term" aria-label="An Orrery code agent reading files and editing auth.ts" role="img">
+          <div class="term__bar"><i></i><i></i><i></i><span>projects/main</span><span class="term__ctx"><b style="--v: 0.137"></b><em>13.7%</em></span></div>
+          <div class="term__view"><ol class="term__log"></ol></div>
+        </div></div>
+        <footer class="prod__foot"><h2>Code</h2><a href="#api">Explore<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></a></footer>
+      </article>
+      <article class="prod">
+        <div class="well well--coral well--prod">{{illos:orrery-agent}}</div>
+        <footer class="prod__foot"><h2>Agent</h2><a href="#features">Explore<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></a></footer>
+      </article>
+      <article class="prod">
+        <div class="well well--sky well--prod">{{illos:orrery-search}}</div>
+        <footer class="prod__foot"><h2>Search</h2><a href="#api">Explore<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></a></footer>
+      </article>
+      <article class="prod prod--wide">
+        <div class="well well--lilac well--wide">{{illos:orrery-realtime}}</div>
+        <footer class="prod__foot"><h2>Realtime</h2><span class="prod__note">First token in 180 ms, streamed as it's written</span><a href="#api">Explore<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></a></footer>
+      </article>
+      <article class="prod">
+        <div class="well well--meadow well--prod">{{illos:orrery-settings}}</div>
+        <footer class="prod__foot"><h2>Connectors</h2><a href="#business">Explore<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></a></footer>
+      </article>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Orrery in numbers">
+    <div class="wrap stats__in">
+      <div><b data-count="1.8" data-suffix="M">1.8M</b><span>developers on the API</span></div>
+      <div><b data-count="41" data-suffix="B">41B</b><span>tokens served a day</span></div>
+      <div><b data-count="180" data-suffix=" ms">180 ms</b><span>median first token</span></div>
+      <div><b data-count="99.98" data-suffix="%">99.98%</b><span>uptime, last 90 days</span></div>
+    </div>
+  </section>
+
+  <section class="biz" id="business">
+    <div class="wrap biz__in">
+      <div class="biz__copy">
+        <p class="eyebrow">Orrery for Business</p>
+        <h2 class="h2">Answers from your <span class="soft">own company.</span></h2>
+        <p class="body">Orrery reads your docs, sheets and tickets, and answers with the sources it used. Search, voice and code included, with the controls your security team will ask for.</p>
+        <div class="ctas ctas--left">
+          <a class="pill pill--ink" href="#pricing">Try free<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a>
+          <a class="pill pill--line" href="#contact">Contact sales</a>
+        </div>
+        <ul class="ticks">
+          <li><svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5"/></svg>SOC 2 Type II</li>
+          <li><svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5"/></svg>HIPAA</li>
+          <li><svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5"/></svg>GDPR</li>
+          <li><svg viewBox="0 0 12 12" aria-hidden="true"><path d="m2.5 6.2 2.3 2.3 4.7-5"/></svg>SSO and SCIM</li>
+        </ul>
+      </div>
+      <div class="shot">
+        <img class="shot__bg" src="/img/office-800.webp" srcset="/img/office-800.webp 800w, /img/office-1400.webp 1400w" sizes="(min-width: 1100px) 620px, 100vw" width="1400" height="1045" alt="" loading="lazy">
+      <div class="chat" data-chat>
+        <div class="chat__log">
+          <p class="msg msg--me">Pull last quarter's churn by plan and draft the board update</p>
+          <p class="msg msg--bot">Here are Q3 churn and the board materials:</p>
+          <a class="file" href="#business"><span class="file__ic file__ic--xls">XLS</span><span><b>Q3_Churn.xlsx</b><small>Churn by plan and region, with the cohort tab</small></span></a>
+          <a class="file" href="#business"><span class="file__ic file__ic--ppt">PPT</span><span><b>Board_Update.pptx</b><small>Twelve slides: churn, revenue and the plan</small></span></a>
+          <a class="file" href="#business"><span class="file__ic file__ic--doc">DOC</span><span><b>Summary.docx</b><small>One page for the board packet</small></span></a>
+        </div>
+        <form class="chat__ask" onsubmit="return false">
+          <label class="sr" for="ask">Ask Orrery</label>
+          <button class="chat__plus" type="button" aria-label="Attach a file"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></button>
+          <input id="ask" placeholder="Ask Orrery anything" autocomplete="off">
+          <span class="chat__mode">Fast<svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></span>
+          <button class="chat__send" type="submit" aria-label="Send"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button>
+        </form>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="api" id="api">
+    <div class="wrap api__in">
+      <div class="api__copy">
+        <p class="eyebrow">For developers</p>
+        <h2 class="h2">One API. <span class="soft">Every model.</span></h2>
+        <p class="body">Text, code, voice and embeddings behind one endpoint, priced by the million tokens. Start building in minutes.</p>
+        <div class="ctas ctas--left">
+          <a class="pill pill--ink" href="#pricing">Get an API key<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 3 7.5 6l-3 3"/></svg></a>
+          <a class="pill pill--line" href="#models">See the models</a>
+        </div>
+        <dl class="mini">
+          <div><dt>4</dt><dd>models</dd></div>
+          <div><dt>1M</dt><dd>tokens of context</dd></div>
+          <div><dt>2</dt><dd>official SDKs</dd></div>
+        </dl>
+      </div>
+      <div class="code">
+        <div class="well well--dusk code__well">
+          <div class="code__win">
+            <div class="code__bar"><i></i><i></i><i></i><span class="code__file">orrery.py</span><button class="code__copy" type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5" y="5" width="8" height="8" rx="2"/><path d="M3 10.5V4a1 1 0 0 1 1-1h6.5"/></svg><span>Copy</span></button></div>
+<pre id="c-py" role="tabpanel" aria-labelledby="t-py"><code><span class="k">from</span> orrery <span class="k">import</span> Orrery
+
+client = Orrery()
+reply = client.responses.create(
+    model=<span class="s">"orrery-3"</span>,
+    input=<span class="s">"Summarise this week's incidents"</span>,
+    tools=[<span class="s">"search"</span>],
+)
+<span class="k">print</span>(reply.text)</code></pre>
+<pre id="c-ts" role="tabpanel" aria-labelledby="t-ts" hidden><code><span class="k">import</span> Orrery <span class="k">from</span> <span class="s">"orrery"</span>;
+
+<span class="k">const</span> client = <span class="k">new</span> Orrery();
+<span class="k">const</span> reply = <span class="k">await</span> client.responses.create({
+  model: <span class="s">"orrery-3"</span>,
+  input: <span class="s">"Summarise this week's incidents"</span>,
+  tools: [<span class="s">"search"</span>],
+});
+console.log(reply.text);</code></pre>
+<pre id="c-curl" role="tabpanel" aria-labelledby="t-curl" hidden><code><span class="k">curl</span> https://api.orrery.example/v1/responses \
+  -H <span class="s">"Authorization: Bearer $ORRERY_KEY"</span> \
+  -d <span class="s">'{
+    "model": "orrery-3",
+    "input": "Summarise this week's incidents",
+    "tools": ["search"]
+  }'</span></code></pre>
+          </div>
+        </div>
+        <div class="code__tabs" role="tablist" aria-label="Language">
+          <button role="tab" aria-selected="true" aria-controls="c-py" id="t-py" data-file="orrery.py">Python</button>
+          <button role="tab" aria-selected="false" aria-controls="c-ts" id="t-ts" data-file="orrery.ts" tabindex="-1">TypeScript</button>
+          <button role="tab" aria-selected="false" aria-controls="c-curl" id="t-curl" data-file="request.sh" tabindex="-1">cURL</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap models" id="models">
+      <div class="models__head"><h3>Models</h3><p>Prices per million tokens</p></div>
+      <article class="model">
+        <header><b>orrery-3</b><span class="tag tag--new">New</span></header>
+        <p>Our best for reasoning and code.</p>
+        <dl><div><dt>Context</dt><dd>1M</dd></div><div><dt>Input</dt><dd>$3.00</dd></div><div><dt>Output</dt><dd>$12.00</dd></div></dl>
+      </article>
+      <article class="model">
+        <header><b>orrery-3-mini</b></header>
+        <p>Fast and cheap, for most steps.</p>
+        <dl><div><dt>Context</dt><dd>256K</dd></div><div><dt>Input</dt><dd>$0.30</dd></div><div><dt>Output</dt><dd>$1.20</dd></div></dl>
+      </article>
+      <article class="model">
+        <header><b>orrery-voice</b></header>
+        <p>Speech in, speech out, in real time.</p>
+        <dl><div><dt>Context</dt><dd>32K</dd></div><div><dt>Input</dt><dd>$4.00</dd></div><div><dt>Output</dt><dd>$16.00</dd></div></dl>
+      </article>
+      <article class="model">
+        <header><b>orrery-embed</b></header>
+        <p>Embeddings for search and retrieval.</p>
+        <dl><div><dt>Context</dt><dd>8K</dd></div><div><dt>Input</dt><dd>$0.02</dd></div><div><dt>Dimensions</dt><dd>1,024</dd></div></dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">How it works</p>
+        <h2 class="h2">Fast where it can be. <span class="soft">Careful where it counts.</span></h2>
+      </div>
+      <div class="tiles">
+        <article class="tile">
+          <div class="well well--sky well--tile">{{illos:orrery-routing}}</div>
+          <h3>Routed by difficulty</h3>
+          <p>Each request goes to the smallest model that can answer it well. The hard ones reach orrery-3.</p>
+        </article>
+        <article class="tile">
+          <div class="well well--coral well--tile">{{illos:orrery-mention}}</div>
+          <h3>Answers that cite</h3>
+          <p>Orrery pulls the closest pages from your sources and marks each claim with where it came from.</p>
+        </article>
+        <article class="tile">
+          <div class="well well--meadow well--tile">{{illos:orrery-invoice}}</div>
+          <h3>Asks before it acts</h3>
+          <p>Agents stop for a yes before they send, book or pay for anything, and show you exactly what they'll do.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="infra" id="infra">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Infrastructure</p>
+        <h2 class="h2">Trained and served <span class="soft">on our own cluster.</span></h2>
+        <p class="body">We own the racks, so we set the prices and the queue. No one else's demand slows your requests.</p>
+      </div>
+      <div class="infra__grid">
+        <figure class="plate"><div class="photo"><img src="/img/datacenter-800.webp" srcset="/img/datacenter-800.webp 800w, /img/datacenter-1400.webp 1400w" sizes="(min-width: 1100px) 608px, 100vw" width="1400" height="939" alt="A bright aisle between rows of Orrery's server racks" loading="lazy"><div class="photo__spot">{{illos:orrery-usage}}</div></div><figcaption><b>4,096 nodes</b><span>in two regions, on our own power</span></figcaption></figure>
+        <figure class="plate"><div class="photo"><img src="/img/solar-800.webp" srcset="/img/solar-800.webp 800w, /img/solar-1400.webp 1400w" sizes="(min-width: 1100px) 608px, 100vw" width="1400" height="927" alt="Rows of solar panels on a hillside in the morning" loading="lazy"><div class="photo__spot">{{illos:orrery-power}}</div></div><figcaption><b>62% solar</b><span>from our own fields next to both regions</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="security">
+    <div class="wrap sec__in">
+      <div class="sec__copy">
+        <p class="eyebrow">Security</p>
+        <h2 class="h2">Your data stays <span class="soft">yours.</span></h2>
+        <p class="body">Every customer runs in its own workspace, with its own keys. We never train on your prompts, files or answers, and you can delete them in one call.</p>
+        <dl class="facts">
+          <div><dt>Retention</dt><dd>Zero by default</dd></div>
+          <div><dt>Encryption</dt><dd>AES-256 at rest, TLS 1.3</dd></div>
+          <div><dt>Regions</dt><dd>US, EU and your own VPC</dd></div>
+        </dl>
+      </div>
+      <figure class="plate"><div class="well well--lilac well--sec">{{illos:orrery-roles}}</div></figure>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="head head--center">
+        <h2 class="h2">Pricing</h2>
+        <p class="body">Start free. Pay for what you use when you grow.</p>
+        <div class="toggle" role="group" aria-label="Billing period">
+          <button type="button" aria-pressed="true" data-period="month">Monthly</button>
+          <button type="button" aria-pressed="false" data-period="year">Yearly<span>Save 20%</span></button>
+        </div>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Free</h3>
+          <p class="plan__price"><b>$0</b></p>
+          <p class="plan__line">For trying Orrery on your own.</p>
+          <ul><li>Chat and Search</li><li>orrery-3-mini</li><li>50 messages a day</li></ul>
+          <a class="pill pill--line" href="#contact">Start free</a>
+        </article>
+        <article class="plan plan--main">
+          <h3>Pro<span class="tag">Most popular</span></h3>
+          <p class="plan__price"><b data-month="$20" data-year="$16">$20</b><span>per person a month</span></p>
+          <p class="plan__line">For people who use it all day.</p>
+          <ul><li>Every model, orrery-3 included</li><li>Code and Agent</li><li>Realtime voice</li><li>Priority at peak hours</li></ul>
+          <a class="pill pill--ink" href="#contact">Get Pro</a>
+        </article>
+        <article class="plan">
+          <h3>Business</h3>
+          <p class="plan__price"><b>Custom</b></p>
+          <p class="plan__line">For a company and its data.</p>
+          <ul><li>Your own sources, with citations</li><li>SSO, SCIM and audit log</li><li>Zero retention, your region</li></ul>
+          <a class="pill pill--line" href="#contact">Contact sales</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="meet">
+      <img class="meet__bg" src="/img/coast-1280.webp" srcset="/img/coast-1280.webp 1280w, /img/coast-2560.webp 2560w" sizes="(min-width: 1312px) 1232px, 100vw" width="2560" height="1429" alt="" loading="lazy">
+      <div class="head head--center">
+        <h2 class="h2">Let's talk</h2>
+        <p class="body">Bringing Orrery to your company? Tell us a little and someone from our team will write back within a day.</p>
+      </div>
+      <form class="form" novalidate>
+        <div class="form__row">
+          <div class="field"><label for="f-first">First name</label><input id="f-first" name="first" autocomplete="given-name" required></div>
+          <div class="field"><label for="f-last">Last name</label><input id="f-last" name="last" autocomplete="family-name" required></div>
+        </div>
+        <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required><p class="field__err" id="f-email-err" hidden>Use a work email with an @, like name@company.com.</p></div>
+        <div class="field"><label for="f-co">Company</label><input id="f-co" name="company" autocomplete="organization" required></div>
+        <div class="field"><label for="f-size">Company size</label>
+          <div class="select"><select id="f-size" name="size" required><option value="">Choose a size</option><option>1 to 50</option><option>51 to 500</option><option>501 to 5,000</option><option>More than 5,000</option></select><svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 4.5 3 3 3-3"/></svg></div>
+        </div>
+        <div class="field"><label for="f-need">What do you want Orrery to do?</label><textarea id="f-need" name="need" rows="4" required></textarea></div>
+        <button class="pill pill--ink" type="submit">Send</button>
+        <p class="form__done" role="status" hidden>Thanks. This is an example site, so nothing was sent.</p>
+      </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <a class="foot__mark" href="#top" aria-label="Orrery, back to top"><svg class="foot__orrery" viewBox="0 0 32 32" aria-hidden="true"><circle class="logo__orbit" cx="16" cy="16" r="12.6"/><g class="logo__arm"><path class="logo__rod" d="M16 16 L25.65 7.90"/><circle class="logo__planet" cx="25.65" cy="7.90" r="3.6"/></g><circle class="logo__sun" cx="16" cy="16" r="4.8"/></svg></a>
+      <p>© 2026 Orrery. A made-up company.</p>
+      <div class="foot__tools">
+        <a class="built" href="https://illos.dev/?utm_source=orrery-template&amp;utm_medium=example" rel="noopener"><svg viewBox="-26.8 0 400 400" aria-hidden="true"><path fill-rule="evenodd" d="M0,253.81 L0,100 L173.21,0 L346.41,100 L346.41,300 L173.21,400 L76.6,344.23 L76.6,204 L116.6,227.09 L116.6,321.13 L173.21,353.81 L306.41,276.91 L306.41,123.09 L173.21,46.19 L40,123.09 L40,276.91 Z M76.6,140 L116.6,163.09 L116.6,203.09 L76.6,180 Z"/></svg>Animated assets by Illos</a>
+      </div>
+    </div>
+    <nav class="foot__cols" aria-label="Footer">
+      <div><p>Products</p><a href="#top">Chat</a><a href="#products">Code</a><a href="#products">Agent</a><a href="#products">Realtime</a><a href="#products">Search</a><a href="#products">Connectors</a></div>
+      <div><p>Solutions</p><a href="#business">Business</a><a href="#security">Security</a><a href="#contact">Government</a></div>
+      <div><p>Developers</p><a href="#api">API overview</a><a href="#models">Models</a><a href="#pricing">Pricing</a></div>
+      <div><p>Company</p><a href="#infra">Infrastructure</a><a href="#contact">Contact</a></div>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
